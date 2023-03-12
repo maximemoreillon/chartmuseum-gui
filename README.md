@@ -1,6 +1,6 @@
 # ChartMuseum GUI
 
-A simple SvelteKit GUI for ChartMuseum
+A simple SvelteKit GUI for [ChartMuseum](https://chartmuseum.com/)
 
 ## Usage
 
