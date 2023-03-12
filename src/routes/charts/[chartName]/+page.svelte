@@ -8,8 +8,6 @@
 	export let data: { chart: Release[] };
 	const { chart } = data;
 	const { chartName } = $page.params;
-
-	console.log(chart);
 </script>
 
 <div>
@@ -19,10 +17,10 @@
 	</Button>
 </div>
 
-<div class="title">
+<div class="title" style="margin-top: 2em;">
 	<img src={chart[0].icon || '/placeholder_pkg_helm.png'} class="icon" alt="" />
 	<div>
-		<h2>{chartName}</h2>
+		<h2 style="margin: 0;">{chartName}</h2>
 		<p>{chart[0].description}</p>
 	</div>
 </div>
@@ -73,14 +71,13 @@
 	}
 
 	.icon {
-		width: 10em;
-		height: 10em;
+		width: 8em;
+		height: 8em;
 		object-fit: contain;
 	}
 
 	.title {
 		display: flex;
 		gap: 0 2.5em;
-		align-items: center;
 	}
 </style>

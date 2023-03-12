@@ -1,6 +1,5 @@
 <script lang="ts">
 	import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
-	// import LayoutGrid, { Cell } from '@smui/layout-grid';
 	import Textfield from '@smui/textfield';
 	import Icon from '@smui/textfield/icon';
 
