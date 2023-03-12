@@ -15,6 +15,9 @@
 @use '@material/typography/mdc-typography';
 @use '@material/typography/index' as typography;
 
+// MDC Elevation Classes
+@use '@material/elevation/mdc-elevation';
+
 html,
 body {
 	background-color: theme.$surface;

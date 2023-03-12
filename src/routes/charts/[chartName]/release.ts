@@ -4,4 +4,5 @@ export default interface Release {
 	description: string;
 	created: string;
 	appVersion: string;
+	icon: string;
 }

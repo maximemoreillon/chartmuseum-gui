@@ -1,27 +1,33 @@
 <script lang="ts">
 	import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
-	import Textfield from '@smui/textfield';
-	import Icon from '@smui/textfield/icon';
+	import Button, { Label, Icon } from '@smui/button';
 	import { page } from '$app/stores';
 	import { env } from '$env/dynamic/public';
-	import { PUBLIC_CHARTMUSEUM_URL } from '$env/static/public';
 	import type Release from './release';
 
 	export let data: { chart: Release[] };
 	const { chart } = data;
 	const { chartName } = $page.params;
+
+	console.log(chart);
 </script>
 
-<div class="breadcrumps">
-	<a href="/charts">Charts</a>
-	<span>/</span>
-	<span>{chartName}</span>
+<div>
+	<Button href="/charts">
+		<Icon class="material-icons">arrow_left</Icon>
+		<Label>Return to my chart</Label>
+	</Button>
 </div>
 
-<h2>{chartName}</h2>
-<p>{chart[0].description}</p>
+<div class="title">
+	<img src={chart[0].icon || '/placeholder_pkg_helm.png'} class="icon" alt="" />
+	<div>
+		<h2>{chartName}</h2>
+		<p>{chart[0].description}</p>
+	</div>
+</div>
 
-<h3 style="margin-bottom:1rem;">Install</h3>
+<h3>Install</h3>
 <div class="command">
 	<p>
 		helm repo add chartmuseum {env.PUBLIC_CHARTMUSEUM_URL}
@@ -63,5 +69,18 @@
 		color: white;
 		padding: 0.25rem 1rem;
 		font-family: monospace;
+		font-size: 90%;
+	}
+
+	.icon {
+		width: 10em;
+		height: 10em;
+		object-fit: contain;
+	}
+
+	.title {
+		display: flex;
+		gap: 0 2.5em;
+		align-items: center;
 	}
 </style>
