@@ -1,5 +1,6 @@
 <script lang="ts">
 	import TopAppBar, { Row, Section, Title, AutoAdjust } from '@smui/top-app-bar';
+	import IconButton from '@smui/icon-button';
 
 	let topAppBar: TopAppBar;
 </script>
@@ -10,9 +11,16 @@
 			<img class="logo" src="/chartmuseum.png" alt="" />
 			<Title>ChartMuseum GUI</Title>
 		</Section>
+		<!-- <Section align="end" toolbar>
+			<IconButton
+				href="https://github.com/maximemoreillon/chartmuseum-gui"
+				target="_blank"
+				class="material-icons">github</IconButton
+			>
+		</Section> -->
 	</Row>
 </TopAppBar>
-<AutoAdjust {topAppBar}>
+<AutoAdjust {topAppBar} style="min-height: 100%;">
 	<main>
 		<slot />
 	</main>
@@ -22,6 +30,10 @@
 	main {
 		max-width: 80rem;
 		margin-inline: auto;
+	}
+
+	footer {
+		margin-top: auto;
 	}
 
 	.logo {

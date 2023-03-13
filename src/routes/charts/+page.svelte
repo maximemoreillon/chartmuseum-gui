@@ -17,13 +17,15 @@
 		: chartNames;
 </script>
 
-<h2>Charts</h2>
+<div class="top">
+	<h2>Charts</h2>
 
-<p>
-	<Textfield bind:value={search} label="Search" input$emptyValueUndefined>
-		<Icon class="material-icons" slot="trailingIcon">search</Icon>
-	</Textfield>
-</p>
+	<p>
+		<Textfield bind:value={search} label="Search" input$emptyValueUndefined>
+			<Icon class="material-icons" slot="trailingIcon">search</Icon>
+		</Textfield>
+	</p>
+</div>
 
 <DataTable style="width: 100%;">
 	<Head>
@@ -66,5 +68,14 @@
 		width: 3em;
 		object-fit: contain;
 		margin: 0.5em;
+	}
+
+	.top {
+		display: flex;
+		align-items: baseline;
+	}
+
+	.top p {
+		margin-left: auto;
 	}
 </style>
