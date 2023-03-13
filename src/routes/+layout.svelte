@@ -5,7 +5,6 @@
 	let topAppBar: TopAppBar;
 </script>
 
-<!-- <div class="app-content"> -->
 <TopAppBar bind:this={topAppBar} variant="fixed" color="secondary" class="mdc-elevation--z1">
 	<Row>
 		<Section>
@@ -25,23 +24,17 @@
 	<slot />
 </AutoAdjust>
 
-<!-- <footer>ChartMuseum GUI - <a href="https://maximemoreillon.com">Maxime Moreillon</a></footer>
-</div> -->
+<footer>ChartMuseum GUI - <a href="https://maximemoreillon.com">Maxime Moreillon</a></footer>
+
 <style>
 	:global(main) {
-		/* width: 100%; */
 		margin-inline: auto;
 		max-width: 80rem;
-	}
-
-	.app-content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		min-height: 100vh;
+		min-height: calc(100vh - 150px);
 	}
 
 	footer {
+		text-align: center;
 		padding: 1rem;
 		margin-top: auto;
 	}

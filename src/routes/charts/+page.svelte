@@ -72,6 +72,8 @@
 	.top {
 		display: flex;
 		align-items: baseline;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	.top p {
