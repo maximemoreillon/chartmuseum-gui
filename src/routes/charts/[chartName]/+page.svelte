@@ -10,12 +10,12 @@
 	const { chartName } = $page.params;
 </script>
 
-<div>
+<p>
 	<Button href="/charts">
 		<Icon class="material-icons">arrow_left</Icon>
 		<Label>Return to my chart</Label>
 	</Button>
-</div>
+</p>
 
 <div class="title" style="margin-top: 2em;">
 	<img src={chart[0].icon || '/placeholder_pkg_helm.png'} class="icon" alt="" />

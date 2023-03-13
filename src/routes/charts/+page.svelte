@@ -19,7 +19,6 @@
 
 <div class="top">
 	<h2>Charts</h2>
-
 	<p>
 		<Textfield bind:value={search} label="Search" input$emptyValueUndefined>
 			<Icon class="material-icons" slot="trailingIcon">search</Icon>
@@ -30,7 +29,7 @@
 <DataTable style="width: 100%;">
 	<Head>
 		<Row>
-			<Cell>Icon</Cell>
+			<Cell />
 			<Cell>Name</Cell>
 			<Cell style="width: 100%;">Description</Cell>
 			<Cell>Version</Cell>

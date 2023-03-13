@@ -5,34 +5,43 @@
 	let topAppBar: TopAppBar;
 </script>
 
-<TopAppBar bind:this={topAppBar} variant="fixed" color="secondary" class="mdc-elevation--z1">
-	<Row>
-		<Section>
-			<img class="logo" src="/chartmuseum.png" alt="" />
-			<Title>ChartMuseum GUI</Title>
-		</Section>
-		<!-- <Section align="end" toolbar>
-			<IconButton
-				href="https://github.com/maximemoreillon/chartmuseum-gui"
-				target="_blank"
-				class="material-icons">github</IconButton
-			>
-		</Section> -->
-	</Row>
-</TopAppBar>
-<AutoAdjust {topAppBar} style="min-height: 100%;">
-	<main>
+<div class="app-content">
+	<TopAppBar bind:this={topAppBar} variant="fixed" color="secondary" class="mdc-elevation--z1">
+		<Row>
+			<Section>
+				<img class="logo" src="/chartmuseum.png" alt="chartmuseum-gui logo" />
+				<Title>ChartMuseum GUI</Title>
+			</Section>
+			<!-- <Section align="end" toolbar>
+				<IconButton
+					href="https://github.com/maximemoreillon/chartmuseum-gui"
+					target="_blank"
+					class="material-icons">github</IconButton
+				>
+			</Section> -->
+		</Row>
+	</TopAppBar>
+	<AutoAdjust {topAppBar} class="test">
 		<slot />
-	</main>
-</AutoAdjust>
+	</AutoAdjust>
+	<footer>ChartMuseum GUI - <a href="https://maximemoreillon.com">Maxime Moreillon</a></footer>
+</div>
 
 <style>
-	main {
+	:global(main) {
+		width: 100%;
 		max-width: 80rem;
-		margin-inline: auto;
+	}
+
+	.app-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100vh;
 	}
 
 	footer {
+		padding: 1rem;
 		margin-top: auto;
 	}
 
