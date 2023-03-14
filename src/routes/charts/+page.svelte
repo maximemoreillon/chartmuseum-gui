@@ -33,6 +33,7 @@
 			<Cell>Name</Cell>
 			<Cell style="width: 100%;">Description</Cell>
 			<Cell>Version</Cell>
+			<Cell>Date</Cell>
 		</Row>
 	</Head>
 	<Body>
@@ -55,6 +56,9 @@
 				</Cell>
 				<Cell>
 					{charts[chartName][0].version}
+				</Cell>
+				<Cell>
+					{new Date(charts[chartName][0].created).toDateString()}
 				</Cell>
 			</Row>
 		{/each}
