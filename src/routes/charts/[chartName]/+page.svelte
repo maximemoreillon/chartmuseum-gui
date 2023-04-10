@@ -3,6 +3,8 @@
 	import Button, { Label, Icon } from '@smui/button';
 	import { page } from '$app/stores';
 	import { env } from '$env/dynamic/public';
+	import { base } from '$app/paths';
+
 	import type Release from './release';
 
 	export let data: { chart: Release[] };
@@ -11,14 +13,14 @@
 </script>
 
 <p>
-	<Button href="/charts">
+	<Button href="{base}/charts">
 		<Icon class="material-icons">arrow_left</Icon>
 		<Label>Return to my chart</Label>
 	</Button>
 </p>
 
 <div class="title" style="margin-top: 2em;">
-	<img src={chart[0].icon || '/placeholder_pkg_helm.png'} class="icon" alt="" />
+	<img src={chart[0].icon || `${base}/placeholder_pkg_helm.png`} class="icon" alt="" />
 	<div>
 		<h2 style="margin: 0;">{chartName}</h2>
 		<p>{chart[0].description}</p>

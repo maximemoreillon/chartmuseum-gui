@@ -2,6 +2,7 @@
 	import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
 	import Textfield from '@smui/textfield';
 	import Icon from '@smui/textfield/icon';
+	import { base } from '$app/paths';
 
 	import ChartCard from '$lib/ChartCard.svelte';
 
@@ -42,12 +43,12 @@
 				<Cell>
 					<img
 						class="chart_icon"
-						src={charts[chartName][0].icon || '/placeholder_pkg_helm.png'}
+						src={charts[chartName][0].icon || `${base}/placeholder_pkg_helm.png`}
 						alt=""
 					/>
 				</Cell>
 				<Cell>
-					<a href={`/charts/${chartName}`}>
+					<a href={`charts/${chartName}`}>
 						{chartName}
 					</a>
 				</Cell>

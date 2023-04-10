@@ -13,4 +13,6 @@ docker run \
   moreillon/chartmuseum-gui
 ```
 
-For docker-compose, please see the sample file in this repository
+For docker-compose, please see the sample file in this repository.
+
+Note: when using behind a reverse-proxy, use the PATH_BASE environment variable set the URL base (e.g. /gui)

@@ -1,14 +1,24 @@
 <script lang="ts">
 	import TopAppBar, { Row, Section, Title, AutoAdjust } from '@smui/top-app-bar';
-	import IconButton from '@smui/icon-button';
+	import { base } from '$app/paths';
 
 	let topAppBar: TopAppBar;
 </script>
 
+<svelte:head>
+	<!-- <base href={`/${base}/`} /> -->
+	<link rel="stylesheet" href="{base}/smui.css" media="(prefers-color-scheme: light)" />
+	<link
+		rel="stylesheet"
+		href="{base}/smui-dark.css"
+		media="screen and (prefers-color-scheme: dark)"
+	/>
+</svelte:head>
+
 <TopAppBar bind:this={topAppBar} variant="fixed" color="secondary" class="mdc-elevation--z1">
 	<Row>
 		<Section>
-			<img class="logo" src="/chartmuseum.png" alt="chartmuseum-gui logo" />
+			<img class="logo" src="{base}/chartmuseum.png" alt="chartmuseum-gui logo" />
 			<Title>ChartMuseum GUI</Title>
 		</Section>
 		<!-- <Section align="end" toolbar>
