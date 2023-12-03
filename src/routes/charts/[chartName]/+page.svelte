@@ -15,7 +15,7 @@
 <p>
 	<Button href="{base}/charts">
 		<Icon class="material-icons">arrow_left</Icon>
-		<Label>Return to my chart</Label>
+		<Label>Return</Label>
 	</Button>
 </p>
 
@@ -33,7 +33,7 @@
 		helm repo add chartmuseum {env.PUBLIC_CHARTMUSEUM_URL}
 	</p>
 	<p>
-		helm install my-{chartName} chartmuseum/{chartName} --version {chart[0].version}
+		helm install {chartName} chartmuseum/{chartName} --version {chart[0].version}
 	</p>
 </div>
 
@@ -70,6 +70,7 @@
 		padding: 0.25rem 1rem;
 		font-family: monospace;
 		font-size: 90%;
+		border-radius: 4px;
 	}
 
 	.icon {
