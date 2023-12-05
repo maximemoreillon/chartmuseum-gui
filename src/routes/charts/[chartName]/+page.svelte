@@ -28,13 +28,13 @@
 </div>
 
 <h3>Install</h3>
+<p>Adding the repository:</p>
 <div class="command">
-	<p>
-		helm repo add chartmuseum {env.PUBLIC_CHARTMUSEUM_URL}
-	</p>
-	<p>
-		helm install {chartName} chartmuseum/{chartName} --version {chart[0].version}
-	</p>
+	helm repo add chartmuseum {env.PUBLIC_CHARTMUSEUM_URL}
+</div>
+<p>Installing the chat:</p>
+<div class="command">
+	helm install {chartName} chartmuseum/{chartName} --version {chart[0].version}
 </div>
 
 <h3>Releases</h3>
@@ -67,7 +67,7 @@
 	.command {
 		background-color: #444444;
 		color: white;
-		padding: 0.25rem 1rem;
+		padding: 1rem;
 		font-family: monospace;
 		font-size: 90%;
 		border-radius: 4px;
