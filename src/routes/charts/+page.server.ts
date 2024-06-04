@@ -16,6 +16,7 @@ export async function load({ fetch }) {
 					'base64'
 				)
 		);
+		options['headers'] = headers;
 	}
 	const res = await fetch(url, options);
 	const charts = await res.json();
