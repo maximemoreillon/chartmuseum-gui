@@ -17,6 +17,7 @@ export async function load({ fetch, params }) {
 					'base64'
 				)
 		);
+		options['headers'] = headers;
 	}
 
 	const res = await fetch(url, options);
